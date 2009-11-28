@@ -61,12 +61,13 @@ def week_analysis
   end
 
   # Return this map
-  time_spent
+  time_spent.sort { |a, b| b[1] <=> a[1] }
 end
 
 # Analysis solely of today
 def today_analysis
-  daily_analysis Time.now.strftime("Log%d%b%Y.log")
+  acts = daily_analysis Time.now.strftime("Log%d%b%Y.log")
+  acts.sort { |a, b| b[1] <=> a[1] }
 end
 
 # Summarize time spent

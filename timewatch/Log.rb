@@ -59,7 +59,7 @@ def prev_end_time
     store_activity_end_time
   end
 
-  IO.readlines(MAIN_DIR + "prev_end_time", "r")[0]
+  IO.readlines(MAIN_DIR + "prev_end_time")[0]
 end
 
 # What was the last activity?
@@ -68,6 +68,6 @@ def get_last_activity
     write_last_activity "Unknown"
   end
 
-  IO.readlines(MAIN_DIR + "prev_activity", "r")[0]
+  IO.readlines(MAIN_DIR + "prev_activity")[0]
 end
 
